@@ -18,5 +18,5 @@ Markoff Chaney -- 84557 views
 
 
 3. On which days did more than 1% of requests lead to errors?
-2016-07-17 -- 2.2626862468027260% errors
+July      17, 2016 -- 2.2% errors
 ```
