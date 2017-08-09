@@ -10,7 +10,7 @@
   The log table includes a column status that indicates the HTTP status code that the news site sent to the user's browser.
 
 ## Requirements
-* Python 3 +
+* Python 3+
 * psycopg2
 * Postgresql 9.6
 
@@ -28,13 +28,6 @@ psql -d news
 * `python3 log-analysis.py`
 
 ### Create Views
-```sql
-CREATE VIEW author_info AS
-SELECT authors.name, articles.title, articles.slug
-FROM articles, authors
-WHERE articles.author = authors.id
-ORDER BY authors.name;
-```
 
 ```sql
 create view total_views as select date(time), count(*) as views from log group by date(time);
