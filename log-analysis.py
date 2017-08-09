@@ -19,9 +19,9 @@ def main():
     queryTwo = """select name, count(*) as views from authors join articles 
      on authors.id = articles.author join log on log.path = 
      concat('/article/', articles.slug) group by name order by views desc;"""
-    queryThree = """select total_views.date, 
-    (100.0*error_views.errors/total_views.views) as percent from total_views 
-    join error_views on total_views.date = error_views.date and 
+    queryThree = """select to_char(total_views.date, 'Month DD, YYYY'), 
+    trunc(100.0*error_views.errors/total_views.views, 1) as percent from
+    total_views join error_views on total_views.date = error_views.date and 
     (100.0*error_views.errors/total_views.views) > 1;"""
     print("\n\n1. What are the most popular three articles of all time?")
     for(title, views) in fetchAll(db, queryOne):
