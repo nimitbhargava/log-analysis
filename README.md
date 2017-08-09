@@ -16,16 +16,10 @@
 
 ## How to run
 
-* load the data onto the database
-```sql
-psql -d news -f newsdata.sql
-```
-* connect to the database
-```sql
-psql -d news
-```
+* Load the data onto the database `psql -d news -f newsdata.sql`
+* Connect to the database `psql -d news`
 * Create Views
-* `python3 log-analysis.py`
+* Run Log Analysis python program `python3 log-analysis.py`
 
 ### Create Views
 
